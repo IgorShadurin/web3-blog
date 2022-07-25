@@ -44,7 +44,7 @@ jobs:
         id: swarm-cid
         uses: ethersphere/swarm-actions/reference-to-cid@latest
         with:
-          reference: ${{ steps.swarm-upload.outputs.reference }}
+          reference: ${{ steps.swarm-feed.outputs.manifest }}
 
       - name: Result information
         run: |

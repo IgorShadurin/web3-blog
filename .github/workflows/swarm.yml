@@ -42,7 +42,7 @@ jobs:
           
       - name: convert feed reference to cid
         id: swarm-cid
-        uses: ethersphere/swarm-actions/reference-to-cid@v1
+        uses: ethersphere/swarm-actions/reference-to-cid@latest
         with:
           reference: ${{ steps.swarm-feed.outputs.reference }}
 

@@ -39,6 +39,12 @@ jobs:
           reference: ${{ steps.swarm-upload.outputs.reference }}
           topic: index
           signer: ${{ secrets.SIGNER }}
+          
+      - name: convert feed reference to cid
+        id: swarm-cid
+        uses: ethersphere/swarm-actions/reference-to-cid@v1
+        with:
+          reference: ${{ steps.swarm-feed.outputs.reference }}
 
       - name: print references
         run: |
